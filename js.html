@@ -1,33 +1,42 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
- <body> 
- <meta charset="EUC-KR">
-<button id="myButton">Click me</button>
- <INPUT type = "button" value = "배경색 변경" onClick="document.bgColor='red';">
-
-<INPUT type="text" id="name1" onfocus="focusFunction(this.id)">
-
-<INPUT type="text" id="name2" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)">
-
-<INPUT type="text" id="name2" onfocus="focusFunction(this.id)" onblur="blurFunction(this.id)">
-
- <script> var button = document.getElementById('myButton'); button.addEventListener('click', function() { 
-document.write('button clicked!.'); 
-}); 
- function dblClickFunction(x) {
-	 if(document.getElementById(x).style.background == "white"){
-	 	document.getElementById(x).style.background = "green";
-	 }else{
-	 	document.getElementById(x).style.background = "white";
-	 }
-	 }
-	 function focusFunction(x) {
-	     document.getElementById(x).style.background = "yellow";
-	 }
-	 function blurFunction(x) {
-	     document.getElementById(x).style.background = "red";
-	 }
- 
-</script> 
-</body> 
+<head>
+<title>01-3</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script> function clear() {
+$("table *").removeAttr("style");
+function click1() { } 
+function click2() { }
+function click3() { }
+function click4() { }
+ </script>
+</head>
+<body>
+   <table border="1">
+      <tr>
+         <th>구분</th>
+         <th>A</th>
+         <th>B</th>
+      </tr>
+      <tr>
+         <td>가</td>
+         <td>10</td>
+         <td>10</td>
+      </tr>
+      <tr>
+         <td>나</td>
+         <td>20</td>
+         <td>20</td>
+      </tr>
+      <tr>
+         <td>계</td>
+         <td>30</td>
+         <td>30</td>
+      </tr>
+   </table>
+   <input type="button" value="[가]색 변경" onclick="click1()" />
+   <input type="button" value="[나]색 변경" onclick="click2()" />
+   <input type="button" value="[A]색 변경" onclick="click3()" />
+   <input type="button" value="[B]색 변경" onclick="click4()" />
+</body>
 </html>
